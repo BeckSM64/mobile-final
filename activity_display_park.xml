@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/purple_light">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/park_info"
+        android:id="@+id/infoTitle"
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/park_name"
+        android:id="@+id/parkNameTitle"
+        android:textSize="25sp"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/infoTitle"
+        android:layout_alignStart="@+id/infoTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/park_name"
+        android:id="@+id/parkName"
+        android:layout_below="@+id/parkNameTitle"
+        android:layout_alignStart="@+id/parkNameTitle"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/park_street"
+        android:id="@+id/parkStreetTitle"
+        android:textSize="25sp"
+        android:layout_below="@+id/parkName"
+        android:layout_alignStart="@+id/parkName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/park_street"
+        android:id="@+id/parkStreet"
+        android:textSize="35sp"
+        android:layout_below="@+id/parkStreetTitle"
+        android:layout_alignStart="@+id/parkStreetTitle" />
+</RelativeLayout>
