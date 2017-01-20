@@ -1,7 +1,7 @@
 package com.example.shane_000.parkactivities;
 
 /**
- * Created by shane_000 on 12/30/2016.
+ * Created by Shane Harrington on 12/30/2016.
  * Park Class
  */
 

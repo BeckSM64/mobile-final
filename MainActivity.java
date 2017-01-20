@@ -28,10 +28,15 @@ public class MainActivity extends AppCompatActivity{
     String parkZip;
     String tempText;
 
+    DatabaseHandler db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //CREATE THE DATABASE
+        db = DatabaseHandler.getInstance(this);//This should create one instance of the database to use
 
         //Initialize widgets for this activity
         submitButton = (Button) findViewById(R.id.submitButton);
@@ -64,6 +69,9 @@ public class MainActivity extends AppCompatActivity{
             Intent myIntent = new Intent(MainActivity.this, ListParks.class);
             myIntent.putExtra("key", tempText);//Send data here to new activity
             MainActivity.this.startActivity(myIntent);
+
+            //Add to database
+            db.addPark(new Park(0, parkName, parkAddress, parkState, parkZip));
         }
     };
 }
